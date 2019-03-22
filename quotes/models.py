@@ -5,7 +5,9 @@ from django.template.defaultfilters import slugify
 
 
 class Personality(models.Model):
-    personality_name = models.CharField("Influential Person", max_length=100)
+    personality_name = models.CharField(
+        "Influential Person", unique=True, max_length=100
+    )
     slug = models.SlugField(blank=True, unique=True, max_length=100)
     info = models.TextField("Information")
     trivia = models.TextField("Trivia")
