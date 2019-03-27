@@ -40,6 +40,7 @@
             "args": [
                 "runserver",
                 "--noreload",
+                "1621"
             ],
             "django": true
         },
